@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<object>
+<table value="apanel">
+	
+	<home_content useTable="yes">
+		<field name="home_id" type="int" formname="Id" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="home_head" prior="*" type="string" formname="Head" defaultvalue="__get" formtype="text" showinform="yes" disabled="All"/>
+		<field name="home_topic" type="string" formname="Topic" defaultvalue="__get" formtype="text" showinform="yes"/>
+		<field name="home_img" type="string" formname="Image" defaultvalue="__get" formtype="image" showinform="yes" showinformAdd="no"/>
+		<field name="home_detail" type="string" formname="Detail" formtype="textarea" cols="40" defaultvalue="__get" rows="4" showinform="yes"/>
+				
+		<idfield name="home_id"/>
+		<namefield name="home_head" repeat="no"/>
+		
+		<showpage value="15"/>
+	</home_content>
+	
+	<room_suite useTable="yes">
+		<field name="room_id" type="int" formname="Id" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="room_title" prior="*" type="string" formname="Cover Title" defaultvalue="__get" formtype="text" showinform="yes" disabled="All"/>
+		<field name="pic1" type="string" formname="Cover Image" defaultvalue="__get" formtype="image" showinform="yes" showinformAdd="no"/>
+		<field name="pic2" type="string" formname="Cover Title" defaultvalue="__get" formtype="image" showinform="yes" showinformAdd="no"/>
+		<field name="pic3" type="string" formname="Room Title" defaultvalue="__get" formtype="image" showinform="yes" showinformAdd="no"/>
+		<field name="cover_detail" type="string" formname="Cover Paragraph" defaultvalue="__get" formtype="textarea" showinform="yes"/>
+		<field name="room_detail" type="string" formname="Detail Paragraph" defaultvalue="__get" formtype="textarea" showinform="yes"/>		
+		<field name="validity" type="string" formname="Validity" formtype="text" cols="40" defaultvalue="__get" rows="4" showinform="yes"/>	
+		<field name="date_high_season" type="string" formname="Date High Season" formtype="text" cols="40" defaultvalue="__get" rows="4" showinform="yes"/>		
+		<field name="date_green_season" type="string" formname="Date Green Season" formtype="text" cols="40" defaultvalue="__get" rows="4" showinform="yes"/>	
+		<field name="date_holiday" type="string" formname="Date Holiday" formtype="text" cols="40" defaultvalue="__get" rows="4" showinform="yes"/>	
+		<field name="rate_high_season" type="string" formname="Rate High Season" formtype="text" cols="40" defaultvalue="__get" rows="4" showinform="yes"/>		
+		<field name="rate_green_season" type="string" formname="Rate Green Season" formtype="text" cols="40" defaultvalue="__get" rows="4" showinform="yes"/>	
+		<field name="rate_holiday" type="string" formname="Rate Holiday" formtype="text" cols="40" defaultvalue="__get" rows="4" showinform="yes"/>	
+
+		<field name="link" type="string" formname="Booking Link" formtype="text" cols="40" defaultvalue="__get" rows="4" showinform="yes"/>
+		
+		<idfield name="room_id"/>
+		<namefield name="room_title" repeat="no"/>
+		
+		<showpage value="15"/>
+	</room_suite>
+	
+	<spa_relax useTable="yes">
+		<field name="relax_id" type="int" formname="Id" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="title" prior="*" type="string" formname="Head Title" defaultvalue="__get" formtype="text" showinform="yes" disabled="All"/>
+		<field name="pic1" type="string" formname="Activity logo" defaultvalue="__get" formtype="image" showinform="yes" showinformAdd="no"/>
+		<field name="paragraph" type="string" formname="Paragraph" defaultvalue="__get" formtype="textarea" showinform="yes"/>
+
+				
+		<idfield name="relax_id"/>
+		<namefield name="title" repeat="no"/>
+		
+		<showpage value="15"/>
+	</spa_relax>
+	
+	<special_offer useTable="yes">
+		<field name="special_id" type="int" formname="Id" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="cover_title" prior="*" type="string" formname="Cover Title" defaultvalue="__get" formtype="text" showinform="yes" disabled="All"/>
+		<field name="cover_pic" type="string" formname="Cover Image" defaultvalue="__get" formtype="image" showinform="yes" showinformAdd="no"/>
+		<field name="detail_pic" type="string" formname="Detail Image" defaultvalue="__get" formtype="image" showinform="yes" showinformAdd="no"/>
+		<field name="special_fdetail" type="string" formname="First Paragraph" defaultvalue="__get" formtype="textarea" showinform="yes"/>
+		<field name="offer_pic" type="string" formname="Price Image" defaultvalue="__get" formtype="image" showinform="yes" showinformAdd="no"/>
+		<field name="special_sdetail" type="string" formname="Second Paragraph" defaultvalue="__get" formtype="textarea" showinform="yes"/>
+		<field name="link" type="string" formname="Booking Link" formtype="text" cols="40" defaultvalue="__get" rows="4" showinform="yes"/>
+				
+		<idfield name="special_id"/>
+		<namefield name="cover_title" repeat="no"/>
+		
+		<showpage value="15"/>
+	</special_offer>
+	
+	<s_user useTable="yes">
+		<field name="u_id" type="int" formname="User id" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="u" prior="*" type="string" formname="Username" formtype="text" defaultvalue="__get" showinform="yes"/>
+		<field name="pass" type="string" formname="Password" formtype="password" showinform="yes" showinList="no" />
+		<field name="name" type="string" formname="Name" formtype="text" defaultvalue="__get" showinform="yes"/>	
+        <field name="email" type="string" formname="Email" defaultvalue="__get" formtype="text" showinform="yes"/>	
+		<field name="l_lu_user" table="s_user" type="string" formname="Update by" formtype="hidden" defaultvalue="thisuser"/>
+        <field name="l_lu_date" type="int" formname="Update time" formtype="hidden" defaultvalue="thistime"/>
+		<field name="l_lu_ip" type="int" formname="Update ip" formtype="hidden" defaultvalue="thisip"/>
+		<field name="c_lu_user" table="s_user" type="string" formname="Add by" formtype="hidden" showinList="yes" defaultvalue="__get"/>
+        <field name="c_lu_date" type="string" formname="Add time" formtype="hidden" defaultvalue="__get"/>
+		<field name="c_lu_ip" type="string" formname="Add ip" formtype="hidden" defaultvalue="__get"/>
+		
+		<idfield name="u_id"/>
+		<namefield name="u" repeat="no"/>
+		
+		<showpage value="15"/>
+	</s_user>
+	
+	<subscribe useTable="yes">
+		<field name="sub_id" type="int" formname="Subscribe id" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="sub_email" type="string" formname="Email" defaultvalue="__get" formtype="text" showinform="yes"/>
+		<field name="sub_name" type="string" formname="Name" defaultvalue="__get" formtype="text" showinform="yes"/>		
+		
+		<idfield name="sub_id"/>
+		<namefield name="sub_email" repeat="no"/>
+		
+	</subscribe>
+	
+	<work useTable="yes">
+		<field name="work_id" type="int" formname="Magazine id" formtype="hidden" showinform="yes" showinList="no" />
+		<field prior="*" name="work_position" type="string" formname="Work Position" defaultvalue="__get" formtype="text" showinform="yes"/>
+		<field prior="*" name="work_people" type="string" formname="Total People" defaultvalue="__get" formtype="text" showinform="yes"/>
+					
+		
+		<idfield name="work_id"/>
+		<namefield name="work_postion" repeat="no"/>
+		
+	</work>
+	
+</table>
+</object>

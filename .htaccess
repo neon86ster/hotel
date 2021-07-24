@@ -1,0 +1,2 @@
+# This allows you to redirect your entire website to any other domain if not found
+ErrorDocument 404 /error404.php
